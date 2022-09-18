@@ -305,6 +305,38 @@ img {
   fill: var(--bg-body-color);transition: none;
 }
 
+.footer-mail{
+  padding-top: 12px;
+}
+.footer-form-input{
+width: 358px;
+height: 50px;
+
+padding: 15px 15px;
+
+border: 1px solid rgba(255, 255, 255, 0.3);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+border-radius: 4px;
+background: #2F303A;
+
+outline: transparent;
+
+cursor: pointer;
+}
+
+.footer-form-input::placeholder{
+  font-size: 16px;
+line-height: 1.25;
+/* identical to box height, or 125% */
+
+display: flex;
+align-items: center;
+letter-spacing: 0.03em;
+
+color: rgba(255, 255, 255, 0.6);
+}
+
+
 /* footer end*/
 
 /* Секция  Ефективні рішення для вашого бізнесу с кнопкой*/
@@ -418,8 +450,10 @@ img {
   align-items: center;
   justify-content: center;
 }
-.specificity-list-icon {
-}
+
+/* .specificity-list-icon {
+} */
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -802,14 +836,15 @@ img {
   /* start     
   центрування абсолютно позиційованих елементів
   */
+  padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   /* end */
 
-  width: 500px;
-  height: 400px;
+  width: 528px;
+  height: 581px;
   background-color: var(--bg-body-color);
 
   border-radius: 16px;
@@ -818,19 +853,222 @@ img {
 
 .modal-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 8px;
 
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 0;
-  border: 1px solid var(--bg-accent-color);
+  padding: 6px;
+  background: var(--secondary-text-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  
   border-radius: 50%;
 
   cursor: pointer;
 }
+
+.modal-btn-svg{
+  transition: fill var(--anim-fast);
+}
+.modal-btn:focus .modal-btn-svg{
+  fill: var(--bg-logo-color);
+}
+
+
+/* 
+  |============================
+  | Register form
+  |============================
+*/ 
+
+.register-form-group {
+  margin-bottom: 20px;
+}
+.register-form-title{
+display: block;
+
+font-weight: 700;
+font-size: 20px;
+line-height: calc(23 / 20);
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--primary-text-color);
+
+margin-bottom: 12px;
+
+}
+/* label */
+.register-form-field {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* span */
+.register-form-label {
+ display: block;
+
+font-size: 12px;
+line-height: calc(14 / 12);
+letter-spacing: 0.01em;
+color: var(--text-comment-color);
+
+margin-bottom: 4px;
+ 
+ 
+}
+/* input */
+.register-form-input{
+width: 100%;
+height: 40px;
+padding-left: 42px;
+padding-right: 42px;
+
+border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+
+outline: transparent;
+
+cursor: pointer;
+
+transition: border-color var(--anim-fast);
+}
+.register-form-input:focus{
+  border-color: var(--bg-logo-color);
+}
+
+/* svg-icon */
+.register-form-icon{
+  position: absolute;
+  bottom: 11px;
+  left: 10px;
+
+  transition: fill var(--anim-fast);
+}
+.register-form-input:focus + .register-form-icon{
+  fill: var(--bg-logo-color);
+}
+/* Умови договору */
+.register-form-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-bottom: 25px;
+}
+
+.icon-checked{
+opacity: 0;
+transition: opacity var(--anim-fast);
+}
+
+.register-form-checkbox:checked + .register-form-icons .icon-checked {
+  opacity: 1;
+}
+
+.icon-unchecked {
+  transition: opacity var(--anim-fast);
+}
+
+.register-form-checkbox:checked + .register-form-icons .icon-unchecked {
+  opacity: 0;
+}
+
+
+.register-form-desc{
+  font-size: 14px;
+line-height: calc(24 / 14);
+letter-spacing: 0.03em;
+color: var(--text-comment-color);
+
+
+user-select: none;
+}
+.register-form-link{
+  font-size: 14px;
+line-height: calc(24 / 14);
+letter-spacing: 0.03em;
+text-decoration-line: underline;
+color: var(--text-logo-color);
+}
+
+
+.register-form-btn {
+  display: block;
+  margin: 0 auto;
+
+  width: 200px;
+  padding: 10px 52px;
+
+  background: var(--bg-logo-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+
+  cursor: pointer;
+
+  transition: background var(--anim-fast) ;
+}
+
+.register-form-btn:hover,
+.register-form-btn:focus {
+  background: #188ce8;
+}
+
+
+.register-form-message{
+  display: block;
+
+  width: 100%;
+  height: 120px;
+  resize: none;
+  outline-color: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+
+  font-size: 14px;
+  margin-bottom: 25px;
+
+  cursor: pointer;
+
+  transition: border-color var(--anim-fast);
+}
+
+.register-form-message:focus{
+  border-color: var(--bg-logo-color);
+} 
+
+
+.register-form-message::placeholder{
+font-size: 12px;
+line-height: calc(14 / 12);
+letter-spacing: 0.01em;
+color: rgba(117, 117, 117, 0.5);
+}
+
+.register-form-heading{
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: var(--text-comment-color);
+  
+}
+
